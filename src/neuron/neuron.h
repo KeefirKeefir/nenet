@@ -168,7 +168,7 @@ void neuron_tick(neuron_t* neurons) {
     g_neuron_index = 0;
     
     int pos_x = -1;
-    int pos_y = -1;
+    int pos_y = 0;
 
     void* current_neuron_type_label = &&EXCITOR_LABEL; // g_neuron_index love computed goto
 

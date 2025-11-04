@@ -24,8 +24,8 @@ int main(void) {
 
     neuron_t* neurons = new_neuron_array();
 
-    const int screen_x = 128 * 1;
-    const int screen_y = 128 * 1;
+    const int screen_x = 128 * 7;
+    const int screen_y = 128 * 7;
 
     InitWindow(screen_x, screen_y, "nenet");
 
