@@ -187,7 +187,7 @@ void neuron_tick(neuron_t* neurons) {
         }
 
 
-        DrawPixel(pos_x, pos_y, (Color){.a = 255, .r = it->pulse_freshness, .b = it->charge});
+        DrawPixel(pos_x, pos_y, (Color){.a = 255, .r = it->pulse_freshness, .b = it->charge, .g = it->pulse_timer});
 
         it->pulse_freshness = saturated_sub_uchar(it->pulse_freshness, 8);
 
@@ -226,6 +226,8 @@ void neuron_tick(neuron_t* neurons) {
             continue;
         }
         SENSOR_LABEL: {
+
+            it->input_strength = saturated_sub_uchar(it->input_strength, 1);
 
             process_senses(it, g_neuron_index);
 
