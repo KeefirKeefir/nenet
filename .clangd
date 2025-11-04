@@ -1,0 +1,19 @@
+CompileFlags:
+  Add: [
+    "-std=c23",
+    "-xc",
+
+    "--target=x86_64-w64-mingw32",
+
+    "-isystemC:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include",
+    "-isystemC:/msys64/mingw64/include", 
+    "-isystemC:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include-fixed",
+
+    "-D_WIN32",
+    "-D__MSVCRT__",
+    "-D__MINGW64__",
+    "-D__GNUC__=15",  
+    "-D__GNUC_MINOR__=1",
+
+    "-DIMPL_",
+  ]
